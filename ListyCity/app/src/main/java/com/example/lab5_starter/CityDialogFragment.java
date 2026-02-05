@@ -17,6 +17,7 @@ public class CityDialogFragment extends DialogFragment {
     interface CityDialogListener {
         void updateCity(City city, String title, String year);
         void addCity(City city);
+        void removeCity(City city);
     }
     private CityDialogListener listener;
 
@@ -64,6 +65,9 @@ public class CityDialogFragment extends DialogFragment {
         return builder
                 .setView(view)
                 .setTitle("City Details")
+                .setNeutralButton("Delete", (dialog, which) -> {
+                    listener.removeCity(city);
+                })
                 .setNegativeButton("Cancel", null)
                 .setPositiveButton("Continue", (dialog, which) -> {
                     String title = editMovieName.getText().toString();

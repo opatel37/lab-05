@@ -7,7 +7,7 @@
 
 ## References and Resources
 
-Gemini 3
+Gemini AI, citations are in the code
 
 ## Verbal Collaboration
 
